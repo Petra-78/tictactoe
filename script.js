@@ -23,38 +23,13 @@ const Gameboard = (function() {
 })();
 
 
-
-
-// const playerTurns = (function() {
-
-//     const player1Turn = function() {
-//         let player1Row = prompt('which row? (0-2)')
-//         let player1Col = prompt('which column? (0-2)')
-
-//         playRound(player1Row, player1Col);
-//         console.log(Gameboard.getBoard()) 
-//     }
-
-//     const player2Turn = function() {
-//         let player2Row = prompt('which row? (0-2)')
-//         let player2Col = prompt('which column? (0-2)')
-
-//         playRound(player2Row, player2Col);
-//         console.log(Gameboard.getBoard());
-//     }
-//     const getPlayer1Turn = () => player1Turn();
-//     const getPlayer2Turn = () => player2Turn();
-
-//     return {getPlayer1Turn, getPlayer2Turn}
-// })();
-
 const Player = (function() {
     const players = [
         {name: "player1", marker: "x"}, 
         {name: "player2", marker: "o"}
     ];
 
-    let activePlayer = players[0];
+    let activePlayer = players[1];
     const getActivePlayer = () => activePlayer;
 
     const switchActivePlayer = function() {
@@ -78,14 +53,25 @@ const Game = (function() {
         } else {
             if (Gameboard.getBoard()[row][col] === 0) {
                 Gameboard.getBoard()[row][col] = marker;
+                console.log(Gameboard.getBoard())
                 Player.switchActivePlayer();
             } else {
                 alert("that spot is already taken!")
-            }
-            console.log(Gameboard.getBoard())
+            } 
         }
     } 
 
     const playRound = (row, col) => gameRound(row, col);
     return {playRound}
 })()
+
+Player.switchActivePlayer();
+
+const checkWinner = function() {
+    for (i = 0; i < 3; i++) {
+        if (Gameboard.getBoard()[i]) {
+            console.log("hehe")
+        }
+        
+    }
+}
