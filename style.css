@@ -19,6 +19,17 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.header, 
+.cell, 
+.popup-bg, 
+.grid-wrap,
+.popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .main   {
@@ -30,10 +41,7 @@ body {
 }
 
 .header {
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     padding: 40px 0px;
     margin-bottom: 30px;
     width: 100vw;
@@ -42,14 +50,15 @@ body {
 
 h1 {
     color: white;
-    font-size: 40px;
+    font-size: 50px;
+    font-weight: 600;
+    letter-spacing: 1rem;
+    text-shadow: 5px 5px black;
+    text-align: center;
 }
 
 .grid-wrap {
     width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .grid {
@@ -68,14 +77,50 @@ h1 {
 }
 
 .cell {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 150px;
-    font-family: 'Courier New', Courier, monospace;
+    font-size: 130px;
     color: var(--pink);
+    text-shadow: 8px 5px black;
 }
 
 .circle {
     color:var(--blue);
+}
+
+.popup-bg {
+    display: none;
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background-color: #000000b6;
+}
+
+.popup {
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 400px;
+    width: 500px;
+    background-color: var(--beige);
+    border-radius: 20px;
+    border: 10px solid var(--blue);
+    text-align: center;
+}
+ 
+.winner-name {
+    font-size: 50px;
+    margin-bottom: 2rem;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--pink);
+    color: white;
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+
+button:hover {
+    cursor: pointer;
+    box-shadow: 5px 5px black;
 }
