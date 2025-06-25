@@ -54,7 +54,7 @@ h1 {
     font-size: 60px;
     font-weight: 600;
     letter-spacing: 1rem;
-    text-shadow: 5px 5px black;
+    text-shadow: 7px 0px black;
     text-align: center;
 }
 
@@ -80,7 +80,7 @@ h1 {
 .cell {
     font-size: 130px;
     color: var(--pink);
-    text-shadow: 8px 5px black;
+    text-shadow: 8px 0px black;
 }
 
 .circle {
@@ -135,7 +135,7 @@ button:hover {
 
     .cell {
         font-size: 100px;
-        text-shadow: 4px 0px black;
+        text-shadow: 6px 0px black;
     }
 
     .popup {
