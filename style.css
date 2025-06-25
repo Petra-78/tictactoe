@@ -20,6 +20,7 @@ body {
     justify-content: space-between;
     align-items: center;
     font-family: sans-serif;
+    font-weight: 700;
 }
 
 .header, 
@@ -134,7 +135,7 @@ button:hover {
 
     .cell {
         font-size: 100px;
-        text-shadow: 5px 3px black;
+        text-shadow: 4px 0px black;
     }
 
     .popup {
@@ -167,7 +168,7 @@ button:hover {
 
     .cell {
         font-size: 80px;
-        text-shadow: 2px 2px black;
+        text-shadow: 4px 0px black;
     }
 
     .popup {
@@ -188,7 +189,7 @@ button:hover {
         font-size: 30px;
         letter-spacing: 0.3rem;
         font-weight: 800;
-        text-shadow: 5px 2px black;
+        text-shadow: 5px 0px black;
     }
 
     .header {
