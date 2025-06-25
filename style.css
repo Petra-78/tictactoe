@@ -34,23 +34,23 @@ body {
 
 .main   {
     display: grid;
-    grid-template-rows: auto;
-    align-items: center;
-    justify-content: center;
+    grid-template-rows: 1fr 5fr;
+    align-items: top;
+    justify-content: space-around;
     width: 100%;
+    height: 100vh;
 }
 
 .header {
     flex-direction: column;
     padding: 40px 0px;
-    margin-bottom: 30px;
     width: 100vw;
     background-color: #00B8A9;
 }
 
 h1 {
     color: white;
-    font-size: 50px;
+    font-size: 60px;
     font-weight: 600;
     letter-spacing: 1rem;
     text-shadow: 5px 5px black;
@@ -123,4 +123,73 @@ button {
 button:hover {
     cursor: pointer;
     box-shadow: 5px 5px black;
+}
+
+
+@media (max-width: 1024px) {
+    .grid {
+        height: 400px;
+        width: 400px;
+    }
+
+    .cell {
+        font-size: 100px;
+        text-shadow: 5px 3px black;
+    }
+
+    .popup {
+        width: 80%;
+        height: auto;
+        padding: 2rem 1rem;
+    }
+
+    .winner-name {
+        font-size: 2.5rem;
+    }
+
+    button {
+        font-size: 1.2rem;
+        padding: 10px 15px;
+    }
+
+    h1 {
+        font-size: 40px;
+        letter-spacing: 0.5rem;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .grid {
+        height: 300px;
+        width: 300px;
+    }
+
+    .cell {
+        font-size: 80px;
+        text-shadow: 5px 2px black;
+    }
+
+    .popup {
+        width: 90%;
+        padding: 1.5rem 1rem;
+    }
+
+    .winner-name {
+        font-size: 2rem;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 8px 12px;
+    }
+
+    h1 {
+        font-size: 30px;
+        letter-spacing: 0.3rem;
+    }
+
+    .header {
+        padding: 40px 0;
+    }
 }
